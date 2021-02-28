@@ -24,7 +24,7 @@ virtual = viewport(device, width=32, height=16)
 def get_subs():
 
     name="<YOUTUBE CHANNEL ID>"
-    key="API KEY"
+    key="<API KEY>"
     data = urllib.request.urlopen("https://www.googleapis.com/youtube/v3/channels?part=statistics&id="+name+"&key="+key).read()
     subs=json.loads(data)["items"][0]["statistics"]["subscriberCount"]
     with canvas(device) as draw:
