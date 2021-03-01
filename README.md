@@ -1,4 +1,4 @@
-#YouTube Live Subsciber Counter 
+# YouTube Live Subsciber Counter 
 This uses a raspberry pi and an LED Matrix to display subscriber count of YouTube account. 
 
 It can also be used to view any messages.
@@ -11,6 +11,27 @@ In my example, it shows a one time welcome message, current time, YouTube Channe
 + any Raspberry pi with Raspbian installed
 + LED matrix [Like this one](https://www.amazon.com/HiLetgo-MAX7219-Arduino-Microcontroller-Display/dp/B07FFV537V?ref_=ast_sto_dp)
 
+## Pi Wiring
+ 
+| Board Pin	| Name	| Remarks	|RPi Pin |	RPi Function
+|-----|------|------| -----|-----|
+|1	|VCC	|+5V Power	|2	|5V0
+|2	|GND	|Ground	|6	|GND
+|3	|DIN	|Data In	|19	|GPIO 10 (MOSI)
+|4	|CS	|Chip Select	|24	|GPIO 8 (SPI CE0)
+|5	|CLK	|Clock	|23	|GPIO 11 (SPI CLK)
 
+## Pre-requisites
+
+### Enable the SPI driver for the LED Matrix module to work.
+	'''
+sudo raspi-config
+	'''
+
+Scroll down to `Advanced Options` (`Interfacing Options` on the Pi Zero) and press enter.
+
+Scroll down to `SPI`, press enter, and select `yes`.
+
+Reboot.
 
 
