@@ -46,3 +46,22 @@ python3 led_matrix_youtube.py
 Make sure to set the name (channel ID) and key variable.
 Google API key is free and easy to obtain [Guide Here](https://www.slickremix.com/docs/get-api-key-for-youtube/)
 
+##  Running on Startup
+to sun the scripy on startup modify corontab
+
+```
+sudo crontob -e
+```
+at the bottom of the file add (change path)
+```
+@reboot python <path to the python file> &
+
+sudo reboot
+```
+
+
+Have Fun!!
+
+credits: 
+https://luma-led-matrix.readthedocs.io/en/latest/index.html
+
