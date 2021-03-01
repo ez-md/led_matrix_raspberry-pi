@@ -1,2 +1,7 @@
-# led_matrix_raspberry-pi
-## This is a raspberry based project to display a live YouTube subscriber count of a channel. It uses a LED Matrix as a display. 
+#YouTube Live Subsciber Counter 
+This uses a raspberry pi and an LED Matrix to display subscriber count of youtube account. 
+
+It can also be used to view any messages.
+
+In my example, it shows a one time welcome message, current time, Youtube Channel name and the subcriber count. Then it loops back to the time. 
+
