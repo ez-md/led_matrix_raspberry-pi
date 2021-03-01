@@ -25,13 +25,13 @@ In my example, it shows a one time welcome message, current time, YouTube Channe
 
 ### Enable the SPI driver for the LED Matrix module to work.
 	'''
-sudo raspi-config
+	sudo raspi-config
 	'''
 
-Scroll down to `Advanced Options` (`Interfacing Options` on the Pi Zero) and press enter.
+	Scroll down to `Advanced Options` (`Interfacing Options` on the Pi Zero) and press enter.
 
-Scroll down to `SPI`, press enter, and select `yes`.
+	Scroll down to `SPI`, press enter, and select `yes`.
 
-Reboot.
+	Reboot.
 
 
