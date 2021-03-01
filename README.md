@@ -1,4 +1,4 @@
-#YouTube Live Subsciber Counter 
+# YouTube Live Subsciber Counter 
 This uses a raspberry pi and an LED Matrix to display subscriber count of youtube account. 
 
 It can also be used to view any messages.
