@@ -33,10 +33,10 @@ In my example, it shows a one time welcome message, current time, YouTube Channe
 
 
 ### Install Dependencies
-'''
+
+```
 sudo usermod -a -G spi,gpio pi
 sudo apt install build-essential python3-dev python3-pip libfreetype6-dev libjpeg-dev libopenjp2-7 libtiff5
 sudo -H pip install --upgrade luma.led_matrix
-'''
-
+```
 
