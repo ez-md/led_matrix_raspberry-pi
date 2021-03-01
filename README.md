@@ -5,6 +5,9 @@ It can also be used to view any messages.
 
 In my example, it shows a one time welcome message, current time, YouTube Channel name and the subscriber count.Then it loops back to the time. 
 
+
+![picture of LED Matrix](pix/img1.JPEG)
+<img src=pix/img2.JPEG" alt="LED pix"/>
 ## Required 
 + Python3
 + pip
