@@ -16,6 +16,19 @@ import urllib.request
 import json
 
 
+#SET YOUTUBE CHANNEL ID
+name = "<YOUTUBE CHANNEL ID>"
+
+#SET GOOGLE API KEY
+key = "<API KEY>"
+
+#CHANGE WElCOME MESSAGE
+message = "Hello World"
+
+#SET YOUTUBE CHANNEL NAME
+channel_name = "Channel Name Here"
+
+
 
 serial = spi(port=0, device=0, gpio=noop())
 device = max7219(serial, cascaded=4, block_orientation=-90)
@@ -23,8 +36,6 @@ virtual = viewport(device, width=32, height=16)
 
 def get_subs():
 
-    name="<YOUTUBE CHANNEL ID>"
-    key="<API KEY>"
     data = urllib.request.urlopen("https://www.googleapis.com/youtube/v3/channels?part=statistics&id="+name+"&key="+key).read()
     subs=json.loads(data)["items"][0]["statistics"]["subscriberCount"]
     with canvas(device) as draw:
@@ -34,7 +45,7 @@ def get_subs():
 
 
 def welcome_message():
-    wc_message = show_message(device, 'As-salamu alaykum', fill="White", font=proportional(LCD_FONT), scroll_delay=0.03)
+    wc_message = show_message(device, message, fill="White", font=proportional(LCD_FONT), scroll_delay=0.03)
     return wc_message
 
 
@@ -46,7 +57,7 @@ def show_time():
 
 
 def show_solo():
-    solo = show_message(device, 'Solo Z Rider    Solo Z Rider', fill="White", scroll_delay=0.03)
+    solo = show_message(device, channel_name, fill="White", scroll_delay=0.03)
 #    solo = show_message(device, 'Solo Z Rider    Solo Z Rider', fill="White", font=proportional(CP437_FONT), scroll_delay=0.03)
     return solo
 
